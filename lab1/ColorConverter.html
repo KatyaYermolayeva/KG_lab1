@@ -1,0 +1,66 @@
+<head>
+    <title>Color converter</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div style="display:flex; justify-content:space-around; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+        <div>
+            <h2>HSV</h2>
+            <label for="h">H</label>
+            <input type="number" id="ht" min="0" max="360" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="hs" min="0" max="360" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+    
+            <label for="s">S</label>
+            <input type="number" id="st" min="0" max="100" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="ss" min="0" max="100" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+    
+            <label for="v">V</label>
+            <input type="number" id="vt" min="0" max="100" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="vs" min="0" max="100" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+            <div style="position: relative; width: 0; height: 0">
+                <p style="position: absolute; left: 0; top: 0; color: red" class="warning" hidden>
+                    Выход за пределы диапазона. Происходит округление           
+                </p>
+            </div> 
+        </div>
+
+        <div>
+            <h2>XYZ</h2>
+            <label for="x">X</label>
+            <input type="number" id="xt" min="0" max="96" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="xs" min="0" max="96" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+    
+            <label for="y">Y</label>
+            <input type="number" id="yt" min="0" max="100" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="ys" min="0" max="100" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+    
+            <label for="z">Z</label>
+            <input type="number" id="zt" min="0" max="109" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="zs" min="0" max="109" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+        </div>
+    
+        <div>
+            <h2>LAB</h2>
+            <label for="l">L</label>
+            <input type="number" id="lt" min="0" max="100" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="ls" min="0" max="100" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+    
+            <label for="a">A</label>
+            <input type="number" id="at" min="-128" max="128" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="as" min="-128" max="128" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+    
+            <label for="b">B</label>
+            <input type="number" id="bt" min="-128" max="128" value="0" oninput="UpdateColors(this)">
+            <input type="range" id="bs" min="-128" max="128" value="0" style="margin-left:10px;" oninput="UpdateColors(this)"/><br />
+        </div>
+
+        <div>
+            <input type="color" id="display" style="height: 150px; width: 150px; margin-top: 30px;" oninput="UpdateColors(this)">
+            <div style="position: relative; width: 0; height: 0">
+                <p style="position: absolute; left: 0; top: 0; color: red" class="warning" hidden>
+                    Выход за пределы диапазона. Происходит округление  
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
